@@ -13,4 +13,14 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+// require('./components/Layout');
+// require('./components/Footer');
+
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
+import Layout from "./components/Layout";
+
+if (document.getElementById('app')) {
+    ReactDOM.render(<Layout title="this is variable!"/>, document.getElementById('app'));
+}
