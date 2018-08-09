@@ -53764,17 +53764,37 @@ var Body = function (_Component) {
     function Body() {
         _classCallCheck(this, Body);
 
-        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this));
+
+        _this.state = { id: 2154183 };
+        _this.onClick1 = _this.handleAddCredential.bind(_this);
+        return _this;
     }
 
     _createClass(Body, [{
         key: "handleAddCredential",
-        value: function handleAddCredential(e) {
-            console.log(e);
+        value: function handleAddCredential(button) {
+            var _this2 = this;
+
+            var id = button.target.id;
+
+            console.log(id);
+            // this.setState({id:1111});
+            this.setState(function () {
+                return {
+                    id: 11111
+                };
+            }, function () {
+                console.log(_this2.state);
+            });
         }
     }, {
         key: "render",
         value: function render() {
+            // setTimeout( () => {
+            //     this.setState({id:1111});
+            //     console.log(this.state)
+            // },2000);
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 null,
@@ -53787,7 +53807,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "h3",
                             null,
-                            "body"
+                            this.state.id
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
@@ -53889,7 +53909,7 @@ var Body = function (_Component) {
                             { className: "center" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "button",
-                                { onClick: this.handleAddCredential.bind(this), className: "btn  modal-close waves-effect waves-green" },
+                                { id: "3", onClick: this.onClick1, className: "btn  modal-close waves-effect waves-green" },
                                 "Apply"
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

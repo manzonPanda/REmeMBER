@@ -38,6 +38,12 @@
             <h1 class="blue center white-text">REmeMBER</h1>
             <div id="app">
             </div>
+            <input type="email" placeholder="Email" id="textEmail">
+            <input type="password" placeholder="Password" id="textPassword">
+            <button id="loginButton">Log in</button>
+            <button id="signUpButton">Sign up</button>
+            <button id="logoutButton" class="btn hide">Log out</button>
+
             {{-- <div id="footer">
 
             </div> --}}
@@ -72,6 +78,48 @@
         <script src="{{asset('js/materialize.min.js')}}"></script>
 
         <script>
+            const textEmail = document.getElementById("textEmail");
+            const textPassword = document.getElementById("textPassword");
+            const btnLogin = document.getElementById("loginButton");
+            const btnLogout = document.getElementById("logoutButton");
+            const btnSignUp = document.getElementById("signUpButton");
+
+            btnLogin.addEventListener('click', e => {
+               const email = textEmail.value;
+               const pass = textPassword.value;
+               const auth = firebase.auth();
+               const promise = auth.signInWithEmailAndPassword(email,pass);
+               promise.catch(e => console.log(e.message));  
+            });
+
+            btnSignUp.addEventListener('click', e =>{
+            const email = textEmail.value;
+               const pass = textPassword.value;
+               const auth = firebase.auth();
+               const promise = auth.createUserWithEmailAndPassword(email,pass);
+               promise.catch(e => console.log(e.message));  
+
+            });
+
+            btnLogout.addEventListener('click', e =>{
+                firebase.auth().signOut();
+            });
+
+            //realtime auth listener
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if(firebaseUser){
+                    console.log(firebaseUser);
+                    btnLogout.classList.remove('hide');
+                    btnLogin.classList.add('hide');
+                    btnSignUp.classList.add('hide');
+                }else{
+                    console.log("notlogged in");
+                    btnLogout.classList.add('hide');
+                    btnLogin.classList.remove('hide');
+                    btnSignUp.classList.remove('hide');
+                }
+            });
+
             $(document).ready(function(){
                 $('.modal').modal();
             });

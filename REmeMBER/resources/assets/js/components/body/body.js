@@ -2,15 +2,34 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
 export default class Body extends Component {
-    handleAddCredential(e){
-        console.log(e);
+    constructor(){
+        super();
+        this.state={id:2154183};
+        this.onClick1 = this.handleAddCredential.bind(this);
+    }
+
+    handleAddCredential(button){
+        const {id} = button.target;
+        console.log(id);
+        // this.setState({id:1111});
+        this.setState( () =>({
+            id:11111
+        }), () =>{
+            console.log(this.state
+            );
+        });
+        
     }
     render() {
+        // setTimeout( () => {
+        //     this.setState({id:1111});
+        //     console.log(this.state)
+        // },2000);
         return (
             <div >
                 <div className="row">
                     <div className="col-md-12">
-                       <h3>body</h3>
+                       <h3>{this.state.id}</h3>
                        <div className="row">
                             <div className="col-md-12">
                                 <a href="#modal1" className="btn-floating btn-large modal-trigger waves-effect waves-light red"><i className="material-icons">add</i></a>
@@ -47,7 +66,7 @@ export default class Body extends Component {
                     </div>
                     <div className="modal-footer">
                         <div className="center">
-                            <button onClick={this.handleAddCredential.bind(this)} className="btn  modal-close waves-effect waves-green">Apply</button>
+                            <button id="3" onClick={this.onClick1} className="btn  modal-close waves-effect waves-green">Apply</button>
                             <button className="btn modal-close waves-effect waves-red">Close</button>    
                         </div>
                     </div>
