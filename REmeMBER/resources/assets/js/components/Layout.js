@@ -14,11 +14,7 @@ export default class Layout extends Component {
         return (
             <div >
                 <Body/>
-                <div className="row">
-                    <div className="col-md-12">
-                        <a href="#modal1" className="btn-floating btn-large modal-trigger waves-effect waves-light red"><i className="material-icons">add</i></a>
-                    </div>
-                </div>
+
                 <Footer/>
             </div>
         );
