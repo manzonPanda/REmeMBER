@@ -53724,8 +53724,7 @@ var Layout = function (_Component) {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__body_Body__["a" /* default */], null),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Footer__["a" /* default */], null)
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__body_Body__["a" /* default */], null)
             );
         }
     }]);
@@ -53766,7 +53765,7 @@ var Body = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this));
 
-        _this.state = { id: 2154183 };
+        _this.state = { id: 215221111 };
         _this.onClick1 = _this.handleAddCredential.bind(_this);
         return _this;
     }
@@ -53774,19 +53773,16 @@ var Body = function (_Component) {
     _createClass(Body, [{
         key: "handleAddCredential",
         value: function handleAddCredential(button) {
-            var _this2 = this;
-
             var id = button.target.id;
 
             console.log(id);
             // this.setState({id:1111});
-            this.setState(function () {
-                return {
-                    id: 11111
-                };
-            }, function () {
-                console.log(_this2.state);
-            });
+            // this.setState( () =>({
+            //     id:11111
+            // }), () =>{
+            //     console.log(this.state
+            //     );
+            // });
         }
     }, {
         key: "render",
@@ -53803,28 +53799,16 @@ var Body = function (_Component) {
                     { className: "row" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "col-md-12" },
+                        { className: "col s12 14 offset-14" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "h3",
-                            null,
-                            this.state.id
+                            "a",
+                            { className: "waves-effect waves-light btn" },
+                            "Log in"
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "row" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "div",
-                                { className: "col-md-12" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "a",
-                                    { href: "#modal1", className: "btn-floating btn-large modal-trigger waves-effect waves-light red" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "i",
-                                        { className: "material-icons" },
-                                        "add"
-                                    )
-                                )
-                            )
+                            "a",
+                            { className: "waves-effect waves-light btn" },
+                            "Sign in"
                         )
                     )
                 ),
@@ -53992,7 +53976,7 @@ var Footer = function (_Component) {
 // }
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Footer);
+/* unused harmony default export */ var _unused_webpack_default_export = (Footer);
 
 /***/ }),
 /* 220 */

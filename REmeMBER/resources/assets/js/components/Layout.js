@@ -15,7 +15,6 @@ export default class Layout extends Component {
             <div >
                 <Body/>
 
-                <Footer/>
             </div>
         );
     }

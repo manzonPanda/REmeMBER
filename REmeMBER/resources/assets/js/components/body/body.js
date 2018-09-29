@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Body extends Component {
     constructor(){
         super();
-        this.state={id:2154183};
+        this.state={id:215221111};
         this.onClick1 = this.handleAddCredential.bind(this);
     }
 
@@ -12,12 +12,12 @@ export default class Body extends Component {
         const {id} = button.target;
         console.log(id);
         // this.setState({id:1111});
-        this.setState( () =>({
-            id:11111
-        }), () =>{
-            console.log(this.state
-            );
-        });
+        // this.setState( () =>({
+        //     id:11111
+        // }), () =>{
+        //     console.log(this.state
+        //     );
+        // });
         
     }
     render() {
@@ -27,16 +27,20 @@ export default class Body extends Component {
         // },2000);
         return (
             <div >
+
                 <div className="row">
-                    <div className="col-md-12">
-                       <h3>{this.state.id}</h3>
-                       <div className="row">
+                    <div className="col s12 14 offset-14">
+                        <a className="waves-effect waves-light btn">Log in</a>
+                        <a className="waves-effect waves-light btn">Sign in</a>
+                    
+                    </div>
+                </div>
+                       {/* <h3>{this.state.id}</h3> */}
+                       {/* <div className="row">
                             <div className="col-md-12">
                                 <a href="#modal1" className="btn-floating btn-large modal-trigger waves-effect waves-light red"><i className="material-icons">add</i></a>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div> */}
                 <div id="modal1" className="modal">
                     <div className="modal-header">
                         <h4 className="center">Create new credential</h4>

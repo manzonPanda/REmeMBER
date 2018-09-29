@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color:#06023E
+    
+}
+
+.container{
+    border: 2px solid green;
+    width:  80%;
+    margin:auto;   
+}
+.box1{
+    border: 2px solid red;
+    margin-top: 25%;
+    color:white;
+    text-align: center
+}
+.buttonGroup{
+    margin:5%;
+    text-align: center;
+    border: 2px solid white;
+    word-spacing: 2em;
+}
+.button1{
+    background-color: transparent;
+    border:2px solid yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    padding: 5px
+}
